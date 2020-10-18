@@ -8,15 +8,14 @@ function App() {
   return (
     <div className="App">
         <Navbar />
-        <Banner url = {requests.fetchNetflixOriginals}/>
-        <Row title="Netflix Originals" url = {requests.fetchNetflixOriginals} isLarge/>
-        <Row title="Trending Now" url = {requests.fetchTrending} />
-        <Row title="Top Rated" url = {requests.fetchTopRated} />
-        <Row title="Action Movies" url = {requests.fetchActionMovies} />
-        <Row title="Comedy Movies" url = {requests.fetchComedyMovies} />
-        <Row title="Horror Movies" url = {requests.fetchHorrorMovies} />
-        <Row title="Romantic Movies" url = {requests.fetchRomanticMovies} />
-        <Row title="Documentaries" url = {requests.fetchDocumentaries} />
+        <Banner url = {requests.fetchEnglishSeries}/>
+        <Row title="English Series" url = {requests.fetchEnglishSeries} isLarge/>
+        <Row title="Horror Movies" url = {requests.fetchHorror} />
+        <Row title="Action Movies" url = {requests.fetchAction} />
+        <Row title="Sci-fi Movies" url = {requests.fetchScifi} />
+        <Row title="Romantic Movies" url = {requests.fetchRomantic} />
+        <Row title="Hindi Series" url = {requests.fetchHindiSeries} />
+        <Row title="Others" url = {requests.fetchOthers} />
         
     </div>
   );

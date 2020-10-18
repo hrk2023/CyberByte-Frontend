@@ -24,6 +24,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link rel="stylesheet" type="text/css" href="../src/static/Row.css">
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -48,5 +49,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      function displayDescription(){
+        let element = document.getElementById('movieImage');
+        element.classList.add('des-active');
+      }
+      function removeDescription(){
+        let element = document.getElementById('movieImage');
+        element.classList.remove('des-active');
+      }
+    </script>
   </body>
 </html>
