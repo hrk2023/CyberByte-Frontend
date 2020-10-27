@@ -26,7 +26,7 @@ function Row({ title, url, isLarge}){
             <h3>{title}</h3> 
             <div className={`${isLarge ? 'movie-row' : 'movie-small'}`}>
                 {movies.map((movie) => (
-                    <Movie movie={movie} isLarge={isLarge}/>
+                    <Movie movie={movie} isLarge={isLarge} />
                 ))}
             </div>
         </div>

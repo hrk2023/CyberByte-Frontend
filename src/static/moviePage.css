@@ -1,0 +1,121 @@
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+*{
+    font-family: "Amazon Ember";
+    box-sizing: border-box;
+}
+.movie-wrapper{
+    width: 100vw;
+    color: white;
+    height : 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.movie-desc{
+    position: relative;
+    top : 18%;
+    width : 70%;
+}
+.movie-title{
+    position : relative;
+    font-size: 35px;
+}
+.runtime{
+    margin-left:35px;
+    font-size: 20px;
+    
+}
+.release-year{
+    font-size: 20px;
+    width : 60px;
+    margin-left:20px;
+    object-fit: contain;
+}
+.logo{
+    width : 60px;
+    object-fit: contain;
+}
+.stats-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.star{
+    margin-right: 5px;
+    width : 15px;
+    object-fit: contain;
+}
+.vote{
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.movie-stats{
+    width : 100%;
+}
+.inner-wrapper{
+    width: 40%;
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.movie-overview{
+    margin-left: 35px;
+    font-size: 16px;
+    width : 80%;
+    padding-bottom: 20px;
+}
+.production{
+    margin-left: 35px;
+    padding-top : 20px;
+    font-weight: bold;
+}
+.inner-details{
+    font-weight: normal;
+    color: #E50914;
+}
+.movie-poster-wrapper{
+    width : 30%;
+    padding-left: 20px;
+}
+.movie-poster{
+    width : 250px;
+    top : 20%;
+    position: relative;
+    object-fit: contain;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width : 60%;
+    padding-bottom: 20px;
+}
+.btn-1{
+    margin-left: 35px;
+    margin-top: 20px;
+    font-size: 25px;
+}
+.inner-btn-1{
+    font-size: 70px;
+    padding : 20px;
+    margin-right : 10px;
+    border-radius : 50rem;
+    background: #E50914;
+}
+.btn-2{
+    margin-left: 20px;
+    margin-top: 20px;
+    padding : 10px;
+    font-size: 23px;
+    border : none;
+}
+.inner-btn-2{
+    margin-right : 10px;
+    font-size: 30px;
+    background-color: transparent;
+}
+.btn-2:hover{
+    background-color: transparent;
+}
