@@ -1,0 +1,74 @@
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+*{
+    font-family: "Amazon Ember";
+}
+body{
+    background-color: #111;
+    height : 100vh;
+}
+.login-form-wrapper{
+    width : 50%;
+    margin : auto;
+    position: relative;
+    top : 20%;
+    height : 50vh;
+}
+.login-form-inner-wrapper{
+    width : 60%;
+    background-color: #000000;
+    position: relative;
+    top : 40%;
+    height : 400px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: -84px 46px 5px 0px #070707bf;
+-webkit-box-shadow: -84px 46px 5px 0px #070707bf;
+-moz-box-shadow: -84px 46px 5px 0px #070707bf;
+}
+.img-wrapper{
+    background-color: #000000;
+    width : 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top : 10%;
+}
+.form-header{
+    width : 150px;
+    object-fit: contain;
+    background-color: #000000;
+}
+.login-form{
+    width : 85%;
+    margin:auto;
+    position: relative;
+    top : 20%;
+    background-color: #000000;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.form-control:focus{
+    background-color: #141414bd;
+}
+.form-control{
+    color: #cfcfcf;
+}
+.field{
+    background-color: #141414bd;
+    border : 1px solid #424242;
+    height : 40px;
+}
+.login-btn{
+    background-color: #c0000a;
+    border : none;
+    color : white;
+    font-size: 16px;
+    height : 40px;
+}
+.login-error{
+    color: red;
+    font-size: 12px;
+}

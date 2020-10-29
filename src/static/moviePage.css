@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
 }
-.movie-desc{
+.movie-des{
     position: relative;
     top : 18%;
     width : 70%;
@@ -20,15 +20,16 @@
     font-size: 35px;
 }
 .runtime{
-    margin-left:35px;
-    font-size: 20px;
-    
+    margin-left:5px;
+    font-size: 16px;
+    color: #acacac;
 }
 .release-year{
-    font-size: 20px;
+    font-size: 16px;
     width : 60px;
-    margin-left:20px;
+    margin-left:5px;
     object-fit: contain;
+    color: #acacac;
 }
 .logo{
     width : 60px;
@@ -48,12 +49,14 @@
     font-size: 16px;
     font-weight: bold;
     padding-top: 10px;
+    color: #acacac;
 }
 .movie-stats{
     width : 100%;
 }
 .inner-wrapper{
-    width: 40%;
+    max-width: 40%;
+    margin-left: 35px;
     display : flex;
     flex-direction: row;
     align-items: center;
@@ -70,9 +73,14 @@
     padding-top : 20px;
     font-weight: bold;
 }
+.directors,.starring,.genres,.language{
+    color: #d81f28;
+    font-size : 18px;
+}
 .inner-details{
     font-weight: normal;
-    color: #E50914;
+    font-size : 18px;
+    color: #c5c5c5;
 }
 .movie-poster-wrapper{
     width : 30%;
@@ -106,10 +114,9 @@
 }
 .btn-2{
     margin-left: 20px;
-    margin-top: 20px;
-    padding : 10px;
     font-size: 23px;
     border : none;
+    color : #c5c5c5;
 }
 .inner-btn-2{
     margin-right : 10px;
@@ -117,5 +124,18 @@
     background-color: transparent;
 }
 .btn-2:hover{
-    background-color: transparent;
+    background-color: #3a3a3a;
+    color : #c5c5c5;
+}
+.match{
+    color: #24ab24;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+@media screen and (min-width : 1440px){
+    .inner-wrapper{
+        width : 38%;
+    }
 }

@@ -1,0 +1,11 @@
+.video-player{
+    width : 100vw;
+    height : calc(100vh - 8px);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border: none;
+    margin: auto;
+}
+.video-player::-webkit-scrollbar{
+    display: none;
+}

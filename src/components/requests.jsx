@@ -18,7 +18,6 @@ const requests = {
     "fetchRomantic" : `${baseUrl}/api/romantic/all/`,
     "fetchOthers" : `${baseUrl}/api/others/all/`,
     "fetchScifi" : `${baseUrl}/api/scifi/all/`,
-    "fetchEnglishSeries" : `${baseUrl}/api/english/series/all/`,
-    "fetchHindiSeries" : `${baseUrl}/api/hindi/series/all/`,
+    "fetchSeries" : `${baseUrl}/api/series/all/`,
 }
 export default requests;
