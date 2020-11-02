@@ -11,7 +11,7 @@
 //     "fetchDocumentaries" : `${baseUrl}/discover/movie?api_key=${API_KEY}&with_genres=99`,
 // };
 
-const baseUrl = "http://freenfx.herokuapp.com";
+const baseUrl = "https://freenfx.herokuapp.com";
 const requests = {
     "fetchHorror" : `${baseUrl}/api/horror/all/`,
     "fetchAction" : `${baseUrl}/api/action/all/`,
