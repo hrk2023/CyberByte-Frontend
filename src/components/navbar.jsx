@@ -17,7 +17,7 @@ function Navbar(){
     useEffect(() => {
         const navbar = document.querySelector('.navbar-container');
         window.addEventListener('scroll',() => {
-            if(window.scrollY > 100){
+            if(window.scrollY > 80){
                 navbar.classList.add('navbar-active');
             }else{
                 navbar.classList.remove('navbar-active');

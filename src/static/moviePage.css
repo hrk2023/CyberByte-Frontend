@@ -27,7 +27,7 @@
 .release-year{
     font-size: 16px;
     width : 60px;
-    margin-left:5px;
+    margin-left:10px;
     object-fit: contain;
     color: #acacac;
 }
@@ -61,6 +61,30 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+.series-inner-wrapper{
+    max-width: 35%;
+    margin-left: 35px;
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.season-dropdown-inner{
+    background-color: #282828;
+    padding: 5px 8px;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.season-details-wrapper{
+    position: relative;
+    top : 20%;
+    padding-bottom: 80px;
+}
+.episodes-wrapper{
+    width : 98%;
+    margin: auto;
 }
 .movie-overview{
     margin-left: 35px;
@@ -97,30 +121,37 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width : 60%;
+    width : 72%;
     padding-bottom: 20px;
 }
 .btn-1{
     margin-left: 35px;
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 22px;
 }
 .inner-btn-1{
     font-size: 70px;
-    padding : 20px;
+    padding : 0px 20px;
     margin-right : 10px;
     border-radius : 50rem;
     background: #E50914;
 }
 .btn-2{
     margin-left: 20px;
-    font-size: 23px;
+    font-size: 22px;
     border : none;
     color : #c5c5c5;
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+    border: 1px solid #c4c4c4;
+}
+a{
+    text-decoration: none;
 }
 .inner-btn-2{
     margin-right : 10px;
-    font-size: 30px;
+    font-size: 22px;
     background-color: transparent;
 }
 .btn-2:hover{
@@ -134,8 +165,28 @@
     font-weight: 600;
     padding-left: 10px;
 }
+.episode-bar-wrapper{
+    width: 100%;
+    height: 50px;
+    background-color: #272727;
+    margin-bottom: 30px;
+    position: sticky;
+    display: flex;
+    align-items: center;
+}
+.episode-bar-content{
+    font-size: 25px;
+    width : 40%;
+    margin: auto;
+    text-align: center;
+    background-color:#272727;
+    color: #c2c2c2;
+}
 @media screen and (min-width : 1440px){
     .inner-wrapper{
         width : 38%;
+    }
+    .series-inner-wrapper{
+        width: 26%;
     }
 }

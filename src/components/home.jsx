@@ -21,7 +21,7 @@ function Home() {
         {/* {localStorage.getItem('token') ? */}
         <React.Fragment>
           <Navbar/>
-          <Banner url = {requests.fetchHorror}/>
+          <Banner url = {requests.fetchScifi}/>
           <Row title="Latest Series" url = {requests.fetchSeries} isLarge/>
           <Row title="Horror Movies" url = {requests.fetchHorror} />
           <Row title="Action Movies" url = {requests.fetchAction} />

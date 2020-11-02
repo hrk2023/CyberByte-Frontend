@@ -12,6 +12,7 @@ export const Player = () => {
             <iframe
             src={url}
             allowFullScreen
+            frameborder="0"
             className="video-player"
             />
         </React.Fragment>

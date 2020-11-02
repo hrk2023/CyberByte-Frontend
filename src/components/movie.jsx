@@ -23,12 +23,14 @@ const Movie = ({movie, isLarge}) => {
     }
     return(
         <div className="element-wrapper">
-            <img className={`${isLarge ? 'poster-large' : 'poster' }`}
-            src={`${isLarge ? movie.poster_path : movie.backdrop_path}`} alt="movie-banner" id="movieImage"
-            style={{transform : `${trans}` === "none" ? "none" : "scale(1.08)"}}
-            onMouseOver = {() => setStyle("block","grow","abs") } onMouseOut = {() => setStyle("none","none","static")}
-            onClick={() => setCurrentMovie(movie)}
-            />
+            <Link to={isLarge ? "/series" : "/movie"}>
+                <img className={`${isLarge ? 'poster-large' : 'poster' }`}
+                src={`${isLarge ? movie.poster_path : movie.backdrop_path}`} alt="movie-banner" id="movieImage"
+                style={{transform : `${trans}` === "none" ? "none" : "scale(1.08)"}}
+                onMouseOver = {() => setStyle("block","grow","abs") } onMouseOut = {() => setStyle("none","none","static")}
+                onClick={() => setCurrentMovie(movie)}
+                />
+            </Link>
             {
             !isLarge &&    
             <div className="content-wrapper" style={{display: `${show}` === "none" ? 'none' : "block"}}

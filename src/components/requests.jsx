@@ -19,5 +19,6 @@ const requests = {
     "fetchOthers" : `${baseUrl}/api/others/all/`,
     "fetchScifi" : `${baseUrl}/api/scifi/all/`,
     "fetchSeries" : `${baseUrl}/api/series/all/`,
+    "fetchEpisodes" : `${baseUrl}/api/episode/`
 }
 export default requests;

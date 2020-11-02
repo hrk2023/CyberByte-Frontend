@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.episode-box{
+    display: flex;
+    flex-direction: row;
+    padding : 10px 20px;
+    border-radius: 8px;
+}
+.episode-image-wrapper{
+    width : 30%;
+}
+.episode-image{
+    width: 100%;
+    object-fit: contain;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.episode-details-wrapper{
+    width : 70%;
+    background-color: #0a0a0a;
+}
+.episode-header{
+    font-size: 25px;
+    padding : 20px 25px;
+    background-color: #0a0a0a;
+}
+.episode-play-btn-wrapper{
+    background-color: #0a0a0a;
+}
+.episode-play-btn{
+    font-size: 60px;
+    padding : 20px;
+    margin-right : 20px;
+    border-radius : 50rem;
+    background: #e50914;
+}
+.episode-overview-wrapper{
+    font-size: 18px;
+    padding : 10px 20px;
+    color: #9b9b9b;
+    background-color: #0a0a0a;
+}

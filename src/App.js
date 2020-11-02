@@ -3,6 +3,7 @@ import './App.css';
 import Home from './components/home';
 import Login from './components/login';
 import MoviePage from './components/moviePage';
+import SeriesPage from './components/seriesPage';
 import {LoginProvider} from './components/loginContext';
 import {MasterProvider} from './components/masterContext';
 import {VideoPlayerContext} from './components/videoPlayerContext';
@@ -18,6 +19,7 @@ function App() {
               <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/movie" component={MoviePage} />
+                <Route path="/series" component={SeriesPage}/>
                 <Route path="/player" component={Player} />
                 <Route path="/login" component={Login}/>
               </Switch>
