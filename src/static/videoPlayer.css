@@ -9,3 +9,9 @@
 .video-player::-webkit-scrollbar{
     display: none;
 }
+.player-message{
+    background: transparent;
+    text-align: center;
+    height: 10vh;
+    padding-top : 40%;
+}

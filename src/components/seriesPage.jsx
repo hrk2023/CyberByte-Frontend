@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from 'react';
 import '../static/moviePage.css';
 import Navbar from './navbar';
 import Episodes from './episodes';
-import requests from './requests';
 import {Link,Redirect} from 'react-router-dom';
 import { BsFillCaretRightFill } from 'react-icons/bs';
 import {GoPlus} from 'react-icons/go';
@@ -13,39 +12,10 @@ const SeriesPage = () => {
     const [currentMovie, setCurrentMovie] = useContext(MasterContext);
     const [url,setUrl] = useContext(PlayerContext);
     const [Season, setSeason] = useState(0);
-    const[episodes,setEpisodes] = useState([]);
 
     useEffect(() => {
         window.scrollTo(0,0);
     },[])
-    
-    // useEffect(() => {
-    //     function episodeGetter(url){
-    //         const xhr = new XMLHttpRequest();
-    //         xhr.open('GET',url,true);
-    //         xhr.responseType = 'json';
-    //         xhr.addEventListener('load',() => {
-    //             if(xhr.status === 200){
-    //                 setEpisodes(xhr.response.result);
-    //             }
-    //         });
-    //         xhr.send();
-    //     }
-    //     if(currentMovie !== null){
-    //         let el = document.querySelector('#seasonValue').value;
-    //         console.log(el);
-    //         const arr = el.split(" ");
-    //         let url = `${requests.fetchEpisodes}/${arr[0]}/${arr[2]}`;
-    //         episodeGetter(url);
-    //     }
-    // }, [Season])
-
-
-    const SeasonFormatter = seasonName => {
-        seasonName = String(seasonName);
-        const arr = seasonName.split(" ");
-        return `${arr[arr.length-2]} ${arr[arr.length-1]}`;
-    }
 
     useEffect(() => {
         if(currentMovie !== null){
@@ -53,7 +23,7 @@ const SeriesPage = () => {
             const arr = el.split(" ");
             setSeason(parseInt(arr[arr.length-1] - 1));
         }
-    },[])
+    },[currentMovie])
     const SeasonValue = () => {
         let el = document.querySelector('#seasonValue').value;
         const arr = el.split(" ");
@@ -61,7 +31,6 @@ const SeriesPage = () => {
     }
     return(
         <React.Fragment>
-            {console.log(Season)};
             { currentMovie === null &&
             <Redirect to="/"/>
             }
@@ -80,11 +49,8 @@ const SeriesPage = () => {
                                 onChange={() => SeasonValue()}
                                 id="seasonValue"
                                 >
-                                    {currentMovie.season_collection.map(season => (
-                                        <React.Fragment>
-                                        {console.log(season.season_name)}
+                                    {currentMovie.season_collection.map(season => (                       
                                         <option value={season.season_name} className="season-list">{season.season_name}</option>
-                                        </React.Fragment>
                                     ))}
                                 </select>
                             </p>
@@ -107,10 +73,10 @@ const SeriesPage = () => {
                                 <BsFillCaretRightFill 
                                 className="inner-btn-1" 
                                 onClick={() => setUrl(currentMovie.mega_link)} />
-                                {`Play, Season ${Season + 1} Episode 1`}
+                                Play
                             </span>
                         </Link>
-                        <button className="btn btn-2"><GoPlus className="inner-btn-2"/>Add To Watchlist</button>
+                        <button className="btn btn-2"><GoPlus className="inner-btn-2"/>Watchlist</button>
                     </div>
                     <div className="production">
                         <div className="directors">
@@ -128,7 +94,7 @@ const SeriesPage = () => {
                     </div>
                 </div>
                 <div className="movie-poster-wrapper">
-                    <img src={currentMovie.poster_path} className="movie-poster" />
+                    <img src={currentMovie.poster_path} className="movie-poster" alt="movie-poster"/>
                 </div>
             </div>
             }
@@ -140,7 +106,6 @@ const SeriesPage = () => {
                     </div>
                 </div>
                 <div className="episodes-wrapper">
-                    {console.log(Season)}
                     <Episodes episodes = {currentMovie.season_collection[Season].episodes} />
                 </div>
             </div>

@@ -1,7 +1,8 @@
 import React, {useState, useEffect, useContext} from 'react';
 import '../static/banner.css';
 import { BsFillCaretRightFill } from 'react-icons/bs';
-import { FaListUl } from 'react-icons/fa';
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import {GoPlus} from 'react-icons/go';
 import {PlayerContext} from './videoPlayerContext';
 import {MasterContext} from './masterContext';
 import {Link} from 'react-router-dom';
@@ -42,19 +43,26 @@ function Banner({ url }){
             <div className="container-fluid banner"
             style= {{'backgroundImage':`url("${banner?.backdrop_path}")` }}
             onClick = {() => setCurrentMovie(banner)}>
-                <div className="banner-content col-xs-5">
-                    <h3 className="movie-title">{banner.title}</h3>
+                <div className="banner-content col-xs-12 col-md-5">
+                    <div className="banner-title">{banner.title}</div>
                     {banner.Metascore !== undefined && 
                     <React.Fragment>
                         <div className="ratings">
                             <p className="match-percent">{banner.Metascore}% match</p>
                             <p className="year">{banner.Year}</p>
-                            <p className="year">{runtimeFormatter(banner.Runtime)}</p>
+                            <p className="runtime">{runtimeFormatter(banner.Runtime)}</p>
                             <img className="imdb-logo" src={require('../static/imdb.png')} alt="imdb-logo" />
                             <img className="imdb-star" src={require('../static/icons8-star-48.png')} alt="imdb-star" />
                             <p className="rating-content">{banner.imdbRating}</p>                   
                         </div>
                         <div className="banner-btn">
+                            <Link to={banner.isSeries ? "/series" : "/movie"}>
+                                <button className="btn info-btn"
+                                onClick={() => setLink(banner)}>
+                                    <AiOutlineInfoCircle className="info-icon"/>
+                                    Info
+                                </button>
+                            </Link>
                             <Link to="/player">
                                 <button className="btn btn-secondary play-btn"
                                 onClick={() => setLink(banner.mega_link)}
@@ -63,7 +71,7 @@ function Banner({ url }){
                                     Play
                                 </button>
                             </Link>
-                            <button className="btn more-btn"><FaListUl className="mylist-icon" />My List</button>
+                            <button className="btn more-btn"><GoPlus className="mylist-icon" />My List</button>
                         </div>
                     </React.Fragment>
                     }

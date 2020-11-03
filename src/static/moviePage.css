@@ -139,7 +139,6 @@
 .btn-2{
     margin-left: 20px;
     font-size: 22px;
-    border : none;
     color : #c5c5c5;
     display: flex;
     align-items: center;
@@ -188,5 +187,155 @@ a{
     }
     .series-inner-wrapper{
         width: 26%;
+    }
+}
+@media screen and (max-width : 440px){
+    .movie-wrapper{
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        position: relative;
+        margin-bottom: 130%;
+    }
+    .movie-des{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        order: 2;
+    }
+    .movie-poster-wrapper{
+        width : 100%;
+        padding-left: 0px;
+        padding-top: 10%;
+        display: flex;
+        justify-content: center;
+        order: 1;
+    }
+    .movie-poster{
+        width : 250px;
+        object-fit: contain;
+        margin: auto;
+        border-radius: 5px;
+    }
+    .movie-title{
+        width: 90%;
+        margin: auto;
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 0.15cm;
+        word-spacing: 0.2cm;
+        order: 1;
+    }
+    .stats-wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    .movie-stats{
+        width : 85%;
+        order: 2;
+        margin: auto;
+        justify-content: center;
+    }
+    .series-inner-wrapper{
+        max-width : 80%;
+        justify-content: center;
+        margin-top: 15px;
+        order: 2;
+    }
+    .buttons{
+        order: 3;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    .inner-wrapper{
+        max-width : 80%;
+        margin :auto;
+    }
+    .match, .release-year{
+        font-size: 16px;
+    }
+    .runtime{
+        display: none;
+    }
+    .movie-overview{
+        font-size: 14px;
+        width: 85%;
+        margin: auto;
+        order: 4;
+    }
+    .production{
+        width: 85%;
+        order: 5;
+        text-align: left;
+        padding-bottom: 100px;
+        margin:auto;
+
+    }
+    .directors,.starring,.genres,.language,.inner-details{
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+    .btn-1{
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+    }
+    .inner-btn-1{
+        font-size: 50px;
+        padding : 0px 10px;
+    }
+    .btn-2{
+        font-size: 18px;
+        margin-top: 18px;
+        margin-left: 0px;
+    }
+    .inner-btn-2{
+        margin-right : 10px;
+        font-size: 22px;
+        background-color: transparent;
+    }
+    .season-details-wrapper{
+        position: static;
+    }
+    .episode-bar-wrapper{
+        position: static;
+        top: 100%;
+    }
+    .episodes-wrapper{
+        position: static;
+    }
+}
+@media screen and (min-width: 360px),(max-width: 380px){
+    .movie-stats{
+        width : 90%;
+        order: 2;
+    }
+}
+@media screen and (max-width: 360px){
+    .movie-title{
+        font-size: 30px;
+        letter-spacing: 0.12cm;
+        word-spacing: 1.8px;
+    }
+    .buttons{
+        width: 100%;
+    }
+    .movie-stats{
+        width : 100%;
+        order: 2;
+    }
+    .match, .release-year{
+        font-size: 14px;
+    }
+    .buttons{
+        order: 3;
+        width: 85%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
     }
 }

@@ -69,3 +69,27 @@ li{
 li:hover{
     cursor: pointer;
 }
+@media screen and (max-width : 440px){
+    .netflix-logo{
+        height : 38px;
+        padding-top: 10px;
+    }
+    .avatar{
+        height : 30px;
+    }
+    .glyphicon-search{
+        font-size: 18px;
+        padding-top: 15px;
+    }
+    .dropdown-menu{
+        left : 60%;
+    }
+}
+@media screen and (max-width : 360px){
+    .navbar-container{
+        padding : 15px 8px 15px 8px;
+    }
+    .dropdown-menu{
+        left : 50%;
+    }
+}

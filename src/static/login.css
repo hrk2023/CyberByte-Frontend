@@ -3,8 +3,7 @@
     font-family: "Amazon Ember";
 }
 body{
-    background-color: #111;
-    height : 100vh;
+    background-color: #000;
 }
 .login-form-wrapper{
     width : 50%;

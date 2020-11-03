@@ -43,7 +43,7 @@ const Movie = ({movie, isLarge}) => {
                         onClick={() => setCurrentMovie(movie)}
                         /></span>
                     </Link>
-                    <a className="btn play-bk"><GoPlus className="inner-play-btn"/></a>
+                    <btn className="btn play-bk"><GoPlus className="inner-play-btn"/></btn>
                 </div>
                 <p className="movie-name">{movie.title}</p>
                     <div className="description">

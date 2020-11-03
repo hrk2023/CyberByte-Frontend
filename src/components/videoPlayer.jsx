@@ -9,12 +9,17 @@ export const Player = () => {
             {url === null &&
             <Redirect to="/movie"/>
             }
+            {url === "xyz" ?
+            <h2 className="player-message">Not Available Yet</h2>
+            :
             <iframe
             src={url}
             allowFullScreen
             frameborder="0"
             className="video-player"
+            title={url}
             />
+            }
         </React.Fragment>
     );
 }

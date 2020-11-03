@@ -21,7 +21,7 @@ function Login(){
         xhr.responseType = 'json';
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = () => {
-            if(xhr.status == 200){
+            if(xhr.status === 200){
                 localStorage.setItem('token',xhr.response.token);
                 setToken(xhr.response.token);
             }else{
@@ -38,7 +38,7 @@ function Login(){
                 <div className="login-form-inner-wrapper">
                     <div className="img-wrapper">
                         <img src={require("../static/netflix-logo-png-2562.png")}
-                        className="form-header"/>    
+                        className="form-header" alt="netflix logo"/>    
                     </div> 
                     <form className="login-form"
                      onSubmit={() => formSubmitHandler()}

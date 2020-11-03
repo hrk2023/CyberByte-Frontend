@@ -20,7 +20,7 @@
     padding-top : 10%;
     z-index : 999;
 }
-.movie-title{
+.banner-title{
     background : transparent;
     font-size : 40px;
     padding-left : 40px;
@@ -53,6 +53,14 @@
     padding-top: 10px;
 }
 .year{
+    color: #acacac;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+.runtime{
     color: #acacac;
     background: transparent;
     font-size: 16px;
@@ -109,6 +117,12 @@
     margin-bottom : 4px;
     color : #ececec;
 }
+.info-btn{
+    display: none;
+}
+.info-icon{
+    display: none;
+}
 .banner-footer{
     height : 13rem;
     width : 100vw !important;
@@ -145,5 +159,124 @@
     }
     .banner-footer{
         left: 10%;
+    }
+}
+@media screen and (max-width: 430px){
+    .banner{
+        background-size: cover;
+        height : 40rem;
+        background-position: center center;
+        background-repeat : no-repeat;
+    }
+    .banner-overlay{
+        display: none;
+    }
+    .banner-title{
+        width: 100%;
+        background : transparent;
+        font-size : 34px;
+        font-weight: 550;
+        letter-spacing: 0.15cm;
+        word-spacing: 0.2cm;
+        padding-left : 0px;
+        text-align: center;
+        padding-top: 5px;
+        line-height: 35px;
+    }
+    .movie-desc{
+        display: none;
+    }
+    .banner-content{
+        background : transparent;
+        color : white;
+        position: relative;
+        top : 54%;
+        text-align: center;
+        z-index : 999;
+    }
+    .banner-footer{
+        height: 18rem;
+        top : 22rem;
+        background-image : linear-gradient(180deg, transparent, #080808da, #000);
+    }
+    .play-btn{
+        padding : 5px 15px 5px 15px;
+        font-size : 16px;
+        font-weight: bolder;
+    }
+    .play-icon{
+        padding-top: 2px;
+        font-size : 22px;
+    }
+    .more-btn{
+        font-size : 12px;
+        border: none;
+    }
+    .mylist-icon{
+        display: block;
+        margin: auto;
+        font-size: 20px;
+    }
+    .info-btn{
+        display: block;
+        color : #cecece;
+        font-size : 12px;
+        border: none;
+        background: transparent;
+    }
+    .info-icon{
+        background : transparent;
+        padding-right : 4px;
+        margin-bottom : 4px;
+        display: block;
+        margin: auto;
+        font-size: 20px;
+    }
+    .banner-btn{
+        flex-direction: row-reverse;
+        width: 80%;
+        padding: 0px;
+        margin: auto;
+        justify-content: space-around;
+    }
+    .runtime{
+        display: none;
+    }
+    .ratings{
+        width : 70%;
+        margin: auto;
+        padding: 0px;
+        justify-content: space-around;
+
+    }
+    .match-percent{
+        font-size: 14px;
+    }
+    .year{
+        font-size: 14px;
+    }
+    .imdb-logo{
+        height : 30px;
+    }
+    .imdb-star{
+        height :16px;
+        padding-left: -5px;
+        padding-bottom : 4px;
+    }
+    .rating-content{
+        font-size: 14px;
+    }
+    
+}
+@media screen and (max-width: 360px){
+    .ratings{
+        width : 85%;
+    }
+    .banner-btn{
+        width: 100%;
+    }
+    .banner-title{
+        letter-spacing: 0.12cm;
+        word-spacing: 1.8px;
     }
 }

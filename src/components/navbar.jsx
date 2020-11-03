@@ -1,18 +1,8 @@
-import React, {useEffect, useContext} from 'react';
-// import {LoginContext} from './loginContext';
-import {Redirect,Link} from 'react-router-dom';
+import React, {useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import '../static/navbar.css';
 
 function Navbar(){
-
-    // const[token,setToken] = useContext(LoginContext);
-
-    // useEffect(() => {
-    //     let jwt = localStorage.getItem('token');
-    //     if(jwt){
-    //         setToken(jwt);
-    //     }
-    // })
 
     useEffect(() => {
         const navbar = document.querySelector('.navbar-container');

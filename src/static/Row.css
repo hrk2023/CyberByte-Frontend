@@ -40,6 +40,7 @@ h3{
     object-fit : contain;
     margin-left : 10px;
     max-height : 200px;
+    border-radius: 5px;
     width : 300px;
     transition : transform 0.09s ease-in;
 }
@@ -49,7 +50,7 @@ h3{
 .poster-large{
     object-fit : contain;
     margin-left : 5px;
-    /* max-height: 300px; */
+    border-radius: 3px;
     width : 200px;
     transition : transform 0.4s ease-in-out;
 }

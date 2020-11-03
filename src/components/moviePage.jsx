@@ -1,7 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import '../static/moviePage.css';
 import Navbar from './navbar';
-import Home from './home';
 import {Link,Redirect} from 'react-router-dom';
 import { BsFillCaretRightFill } from 'react-icons/bs';
 import {GoPlus} from 'react-icons/go';
@@ -11,10 +10,6 @@ import {PlayerContext} from './videoPlayerContext';
 const MoviePage = () => {
     const [currentMovie, setCurrentMovie] = useContext(MasterContext);
     const [url,setUrl] = useContext(PlayerContext);
-    // function releaseYearExtractor(year){
-    //     const arr = year.split("-");
-    //     return arr[0];
-    // }
     const runtimeFormatter = (runtime) => {
         runtime = String(runtime);
         const arr = runtime.split(" ");
@@ -72,7 +67,7 @@ const MoviePage = () => {
                                 Play
                             </span>
                         </Link>
-                        <button className="btn btn-2"><GoPlus className="inner-btn-2"/>Add To Watchlist</button>
+                        <button className="btn btn-2"><GoPlus className="inner-btn-2"/>Watchlist</button>
                     </div>
                     <div className="production">
                         <div className="directors">
@@ -90,7 +85,7 @@ const MoviePage = () => {
                     </div>
                 </div>
                 <div className="movie-poster-wrapper">
-                    <img src={currentMovie.poster_path} className="movie-poster" />
+                    <img src={currentMovie.poster_path} className="movie-poster" alt='movie poster' />
                 </div>
             </div>
             }

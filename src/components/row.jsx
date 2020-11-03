@@ -1,11 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import { BsDisplay } from 'react-icons/bs';
-import {css} from 'emotion';
 import '../static/Row.css';
 import Movie from './movie';
 function Row({ title, url, isLarge}){
     const[movies, setMovies] = useState([]);
-    const[show, setShow] = useState("none");
     useEffect(() => {
         function fetchData() {
             const xhr = new XMLHttpRequest();

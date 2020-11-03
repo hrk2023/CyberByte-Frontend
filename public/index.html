@@ -52,14 +52,9 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script>
-      function displayDescription(){
-        let element = document.getElementById('movieImage');
-        element.classList.add('des-active');
-      }
-      function removeDescription(){
-        let element = document.getElementById('movieImage');
-        element.classList.remove('des-active');
-      }
+      window.addEventListener('load', () => {
+        window.scrollTo(0,0);
+      });
     </script>
   </body>
 </html>
