@@ -1,185 +1,188 @@
 @import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
-*{
-    font-family: "Amazon Ember";
-    box-sizing: border-box;
-    color : #c5c5c5;
+* {
+  font-family: "Amazon Ember";
+  box-sizing: border-box;
+  color: #c5c5c5;
 }
-.row-container{
-    padding-left : 20px;
-    max-height : 50rem;
+.row-container {
+  padding-left: 20px;
+  max-height: 50rem;
 }
-h3{
-    font-size : 20px;
-    padding-left : 20px;
-    color : white;
+h3 {
+  font-size: 20px;
+  padding-left: 20px;
+  color: white;
 }
-.movie-row{
-    overflow-x : scroll;
-    /* overflow-y : hidden; */
-    display : flex;
-    height : 32rem;
-    padding : 10px;
+.movie-row {
+  overflow-x: scroll;
+  /* overflow-y : hidden; */
+  display: flex;
+  height: 32rem;
+  padding: 10px;
+  position: relative;
 }
 
-.movie-small{
-    overflow-x : scroll;
-    display : flex;
-    height : 20rem;
-    padding : 0px 0px 0px 10px;
+.movie-small {
+  overflow-x: scroll;
+  overflow-y: visible;
+  display: flex;
+  height : 40rem;
+  position: relative;
+  padding: 0px 0px 0px 10px;
 }
-.movie-small::-webkit-scrollbar{
-    display : none;
+.movie-small::-webkit-scrollbar {
+  display: none;
 }
-.movie-row::-webkit-scrollbar{
-    display : none;
+.movie-row::-webkit-scrollbar {
+  display: none;
 }
-.movie-row::-moz-scrollbar{
-    display : none;
+.movie-row::-moz-scrollbar {
+  display: none;
 }
-.poster{
-    object-fit : contain;
-    margin-left : 10px;
-    max-height : 200px;
-    border-radius: 5px;
-    width : 300px;
-    transition : transform 0.09s ease-in;
+.poster {
+  object-fit: contain;
+  margin-left: 10px;
+  max-height: 200px;
+  border-radius: 5px;
+  width: 300px;
+  transition: transform 0.09s ease-in;
 }
 /* .poster:hover{
     transform : scale(1.08);
 } */
-.poster-large{
-    object-fit : contain;
-    margin-left : 5px;
-    border-radius: 3px;
-    width : 200px;
-    transition : transform 0.4s ease-in-out;
+.poster-large {
+  object-fit: contain;
+  margin-left: 5px;
+  border-radius: 3px;
+  width: 200px;
+  transition: transform 0.4s ease-in-out;
 }
-.poster-large:hover{
-    transform : scale(1.02);
+.poster-large:hover {
+  transform: scale(1.02);
 }
-.row-element-footer{
-    object-fit : contain;
-    height : 5rem;
-    width : 324px;
-    position : relative;
-    top : -5rem;
-    background : transparent;
-    background-image : linear-gradient(180deg, transparent, #333333ad, #141414);
+.row-element-footer {
+  object-fit: contain;
+  height: 5rem;
+  width: 324px;
+  position: relative;
+  top: -5rem;
+  background: transparent;
+  background-image: linear-gradient(180deg, transparent, #333333ad, #141414);
 }
-.element-wrapper{
-    width: 300px;
-    background-color: #000;
+.element-wrapper {
+  width: 300px;
+  background-color: #000;
 }
-.movie-name{
-    font-size: 16px;
-    font-weight: 600;
-    position: relative;
-    top: -6rem;
-    padding-left : 20px;
-    background-color:#141414;
+.movie-name {
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  top: -6rem;
+  padding-left: 20px;
+  background-color: #141414;
 }
-.description{
-    font-size: 14px;
-    width: 324px;
-    position: relative;
-    top : -7rem;
-    background-color:#141414;
-    padding-left : 20px;
+.description {
+  font-size: 14px;
+  width: 324px;
+  position: relative;
+  top: -7rem;
+  background-color: #141414;
+  padding-left: 20px;
 }
-.movie-des-content{
-    width : 26rem;
-    background-color:#141414;
-    color : #cfcfcf;
+.movie-des-content {
+  width: 26rem;
+  background-color: #141414;
+  color: #cfcfcf;
 }
-.rating{
-    display : flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: -7px;
-    background-color:#141414;
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -7px;
+  background-color: #141414;
 }
-.imdb-logo{
-    width : 60px;
-    object-fit: contain;
-    background-color: #141414;
+.imdb-logo {
+  width: 60px;
+  object-fit: contain;
+  background-color: #141414;
 }
-.content-wrapper{
-    width : 324px;
-    position: absolute;
-    background-color:#141414;
-    margin-left: -2px;
-    height : 110px;
+.content-wrapper {
+  width: 324px;
+  position: absolute;
+  background-color: #141414;
+  margin-left: -2px;
+  height: 110px;
 }
-.imdb-star{
-    margin-right: 5px;
-    width : 15px;
-    object-fit: contain;
+.imdb-star {
+  margin-right: 5px;
+  width: 15px;
+  object-fit: contain;
 }
-.rating-number{
-    font-size: 16px;
-    font-weight: bold;
-    padding-top: 8px;
-    background-color:#141414;
-    color : #cfcfcf;
+.rating-number {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 8px;
+  background-color: #141414;
+  color: #cfcfcf;
 }
-.play-wrapper{
-    position : relative;
-    top : -7rem;
-    background-color:transparent;
-    padding-left : 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+.play-wrapper {
+  position: relative;
+  top: -7rem;
+  background-color: transparent;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
-.inner-play-btn{
-    background : #111;
-    margin-bottom : 4px;
-    padding:5px;
-    font-size : 40px;
-    border : 2px solid white;
-    color : white;
-    border-radius: 50rem;
-    z-index : 999;
+.inner-play-btn {
+  background: #111;
+  margin-bottom: 4px;
+  padding: 5px;
+  font-size: 40px;
+  border: 2px solid white;
+  color: white;
+  border-radius: 50rem;
+  z-index: 999;
 }
-.btn:hover{
-    background-color: transparent;
+.btn:hover {
+  background-color: transparent;
 }
-.play-bk{
-    background-color: transparent;
-    border : none;
+.play-bk {
+  background-color: transparent;
+  border: none;
 }
-.movie-year{
-    font-size: 16.5px;
-    font-weight: 600;
-    padding-top: 8px;
-    margin-right: 20px;
-    background-color:#141414;
-    color : #cfcfcf;
+.movie-year {
+  font-size: 16.5px;
+  font-weight: 600;
+  padding-top: 8px;
+  margin-right: 20px;
+  background-color: #141414;
+  color: #cfcfcf;
 }
-.specs-wrapper{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color:#141414;
+.specs-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #141414;
 }
-@media screen and (min-width: 1440px){
-    .poster-large{
-        width : 220px;
-    }
-    .movie-row{
-        height: 36rem;
-    }
-    .row-element-footer{
-        top : -4.8rem;
-        width : 326px;
-    }
-    .content-wrapper{
-        margin-left: -3px;
-        width : 326px;
-    }
-    .description{
-        width : 326px;
-    }
+@media screen and (min-width: 1440px) {
+  .poster-large {
+    width: 220px;
+  }
+  .movie-row {
+    height: 36rem;
+  }
+  .row-element-footer {
+    top: -4.8rem;
+    width: 326px;
+  }
+  .content-wrapper {
+    margin-left: -3px;
+    width: 326px;
+  }
+  .description {
+    width: 326px;
+  }
 }
