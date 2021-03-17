@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import '../static/episode.css';
+import '../static/css/episode.css';
 import {Link} from 'react-router-dom';
 import {PlayerContext} from './videoPlayerContext'
 import { BsFillCaretRightFill } from 'react-icons/bs';

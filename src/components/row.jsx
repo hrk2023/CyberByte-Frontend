@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import '../static/Row.css';
+import '../static/css/Row.css';
 import Movie from './movie';
 function Row({ title, url, isLarge}){
     const[movies, setMovies] = useState([]);
@@ -19,7 +19,6 @@ function Row({ title, url, isLarge}){
     },[url]);
     return(
         <div className="row-container">
-            {console.log(movies[0])}
             <h3>{title}</h3> 
             <div className={`${isLarge ? 'movie-row' : 'movie-small'}`}>
                 {movies.map((movie) => (

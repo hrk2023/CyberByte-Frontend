@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {Redirect} from 'react-router-dom';
 import {PlayerContext} from './videoPlayerContext'
-import '../static/videoPlayer.css';
+import '../static/css/videoPlayer.css';
 export const Player = () => {
     const [url,setUrl] = useContext(PlayerContext)
     return(

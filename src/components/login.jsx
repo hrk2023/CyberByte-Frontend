@@ -1,7 +1,7 @@
 import React, {useState, useEffect,useContext} from 'react';
 import {LoginContext} from './loginContext';
 import {Redirect} from 'react-router-dom';
-import '../static/login.css';
+import '../static/css/login.css';
 function Login(){
     const[username,setUsername] = useState('');
     const[password,setPassword] = useState('');
@@ -37,7 +37,7 @@ function Login(){
             <div className="login-form-wrapper">
                 <div className="login-form-inner-wrapper">
                     <div className="img-wrapper">
-                        <img src={require("../static/netflix-logo-png-2562.png")}
+                        <img src={require("../static/assets/netflix-logo-png-2562.png")}
                         className="form-header" alt="netflix logo"/>    
                     </div> 
                     <form className="login-form"

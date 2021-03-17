@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
-import '../static/moviePage.css';
+import '../static/css/moviePage.css';
 import Navbar from './navbar';
 import Episodes from './episodes';
 import {Link,Redirect} from 'react-router-dom';
@@ -58,8 +58,8 @@ const SeriesPage = () => {
                                 {currentMovie.Year}
                             </p>
                             <p className="stats-wrapper">
-                                <img className="logo" src={require('../static/imdb.png')} alt="imdb-logo" />
-                                <img className="star" src={require('../static/icons8-star-48.png')} alt="imdb-star" />
+                                <img className="logo" src={require('../static/assets/imdb.png')} alt="imdb-logo" />
+                                <img className="star" src={require('../static/assets/icons8-star-48.png')} alt="imdb-star" />
                                 <p className='vote'>{currentMovie.imdbRating}</p>
                             </p>
                         </div>

@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from 'react';
-import '../static/moviePage.css';
+import '../static/css/moviePage.css';
 import Navbar from './navbar';
 import {Link,Redirect} from 'react-router-dom';
 import { BsFillCaretRightFill } from 'react-icons/bs';
@@ -46,8 +46,8 @@ const MoviePage = () => {
                                 {currentMovie.Year}
                             </p>
                             <p className="stats-wrapper">
-                                <img className="logo" src={require('../static/imdb.png')} alt="imdb-logo" />
-                                <img className="star" src={require('../static/icons8-star-48.png')} alt="imdb-star" />
+                                <img className="logo" src={require('../static/assets/imdb.png')} alt="imdb-logo" />
+                                <img className="star" src={require('../static/assets/icons8-star-48.png')} alt="imdb-star" />
                                 <p className='vote'>{currentMovie.imdbRating}</p>
                                 {currentMovie.isSeries === true && 
                                 <p className="season">{currentMovie.season_collection[0]}</p>

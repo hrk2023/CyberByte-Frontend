@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 *{
     color : #fff;
 }
 .banner{
     width : 100vw;
-    background-size: contain;
     height : 50rem;
-    background-position: right 20%;
+    background-image: url('../assets/bannernfc.png');
+    background-size: contain;
+    background-position: right center;
     background-repeat : no-repeat;
 }
 .container-fluid{
@@ -25,9 +27,16 @@
     font-size : 40px;
     padding-left : 40px;
 }
-.movie-desc{
+.banner-subheading{
+    background : transparent;
+    font-size : 25px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left : 40px;
+}
+.banner-desc{
     background : transparent;
     width : 40vw;
+    margin-top: 20px;
     font-size : 16px;
     padding-left : 40px;
     color: #bdbcbc;
@@ -35,56 +44,11 @@
 .banner-btn{
     background : transparent;
     display : flex;
+    margin-top: 20px;
     padding-bottom : 5px;
     padding-left : 40px;
 }
-.ratings{
-    display : flex;
-    background : transparent;
-    padding-left : 30px;
-    align-items : center;
-}
-.match-percent{
-    color: #24ab24;
-    background: transparent;
-    font-size: 16px;
-    font-weight: 600;
-    padding-left: 10px;
-    padding-top: 10px;
-}
-.year{
-    color: #acacac;
-    background: transparent;
-    font-size: 16px;
-    font-weight: 600;
-    padding-left: 10px;
-    padding-top: 8px;
-}
-.runtime{
-    color: #acacac;
-    background: transparent;
-    font-size: 16px;
-    font-weight: 600;
-    padding-left: 10px;
-    padding-top: 8px;
-}
-.imdb-logo{
-    background : transparent;
-    height : 40px;
-    object-fit : contain;
-}
-.imdb-star{
-    background : transparent;
-    height :22px;
-    padding-bottom : 4px;
-    object-fit : contain;
-}
-.rating-content{
-    background : transparent;
-    font-size : 16px;
-    margin-bottom : 2px;
-}
-.play-btn{
+.coffee-btn{
     background-color : #E50914; 
     border : none;
     padding : 5px 25px 5px 25px;
@@ -92,13 +56,13 @@
     margin-right : 10px; 
     transition : all 0.4s ease-in-out;
 }
-.play-icon{
+.coffee-icon{
     background : transparent;
     margin-bottom : 4px;
     padding-right : 4px;
     font-size : 24px;
 }
-.play-btn:hover{
+.coffee-btn:hover{
     background-color : #d3040e;
     color: white;
 }
@@ -125,7 +89,7 @@
 }
 .banner-footer{
     height : 13rem;
-    width : 100vw !important;
+    width : 100vw;
     position : relative;
     top : 37rem;
     background : transparent;
@@ -141,30 +105,60 @@
     background: transparent;
     background-image: linear-gradient(to right,#000,#0c0c0c,transparent);
 }
-@media screen and (min-width: 1440px){
+/* @media screen and (min-width: 2560px){
     .banner{
         background-size: contain;
-        height : 50rem;
-        background-position: right 20%;
+        height : 100rem;
+        background-position: right center;
         background-repeat : no-repeat;
     }
     .banner-overlay{
         width : 80rem;
-        height : 52rem;
+        height : 100rem;
         position: absolute;
-        left : 10%;
+        left : 30%;
+        top : 0px;
+    }
+    .banner-footer{
+        top: 75rem;
+        width: 75%;
+        height: 25rem;
+        left: 25%;
+    }
+} */
+@media screen and (min-width: 1440px){
+    .banner{
+        background-size: contain;
+        height : 50rem;
+        background-position: right center;
+        background-repeat : no-repeat;
+    }
+    .banner-overlay{
+        width : 80rem;
+        height : 50rem;
+        position: absolute;
+        left : 15%;
         top : 0px;
         background: transparent;
         background-image: linear-gradient(to right,#000,#0c0c0c,transparent);
     }
     .banner-footer{
-        left: 10%;
+        width: 85%;
+        left: 15%;
+        top: 38rem;
     }
 }
+@media screen and (max-width: 1024px){
+    .banner-footer{
+        top : 37.3rem;
+    }
+}
+
 @media screen and (max-width: 430px){
     .banner{
+        height : 60rem;
+        background-image: url('../assets/bannermobile.png');
         background-size: cover;
-        height : 40rem;
         background-position: center center;
         background-repeat : no-repeat;
     }
@@ -174,37 +168,43 @@
     .banner-title{
         width: 100%;
         background : transparent;
-        font-size : 34px;
+        font-size : 32px;
         font-weight: 550;
-        letter-spacing: 0.15cm;
-        word-spacing: 0.2cm;
+        letter-spacing: 0.12cm;
+        word-spacing: 0.15cm;
         padding-left : 0px;
         text-align: center;
         padding-top: 5px;
         line-height: 35px;
     }
-    .movie-desc{
+    .banner-subheading{
+        background : transparent;
+        font-size : 18px;
+        padding: 0;
+    }
+    .banner-desc{
         display: none;
     }
     .banner-content{
         background : transparent;
         color : white;
         position: relative;
-        top : 54%;
+        top : 60%;
         text-align: center;
         z-index : 999;
     }
     .banner-footer{
-        height: 18rem;
-        top : 22rem;
+        height: 24rem;
+        top : 37rem;
         background-image : linear-gradient(180deg, transparent, #080808da, #000);
     }
-    .play-btn{
+    .coffee-btn{
+        margin-top: 15px;
         padding : 5px 15px 5px 15px;
         font-size : 16px;
         font-weight: bolder;
     }
-    .play-icon{
+    .coffee-icon{
         padding-top: 2px;
         font-size : 22px;
     }
@@ -235,48 +235,24 @@
     .banner-btn{
         flex-direction: row-reverse;
         width: 80%;
+        margin-top: 10px;
+        margin-top: 10px;
         padding: 0px;
         margin: auto;
         justify-content: space-around;
     }
-    .runtime{
-        display: none;
-    }
-    .ratings{
-        width : 70%;
-        margin: auto;
-        padding: 0px;
-        justify-content: space-around;
-
-    }
-    .match-percent{
-        font-size: 14px;
-    }
-    .year{
-        font-size: 14px;
-    }
-    .imdb-logo{
-        height : 30px;
-    }
-    .imdb-star{
-        height :16px;
-        padding-left: -5px;
-        padding-bottom : 4px;
-    }
-    .rating-content{
-        font-size: 14px;
-    }
-    
 }
 @media screen and (max-width: 360px){
-    .ratings{
-        width : 85%;
-    }
     .banner-btn{
+        margin-top: 10px;
         width: 100%;
     }
     .banner-title{
-        letter-spacing: 0.12cm;
+        letter-spacing: 0.09cm;
         word-spacing: 1.8px;
+    }
+    .banner-subheading{
+        background : transparent;
+        font-size : 18px;
     }
 }

@@ -10,16 +10,10 @@
     align-items : center;
     transition : background 0.2s ease-in-out;
 }
-.netflix-logo{
+.cypherbyte-logo{
     background : transparent;
     padding-left:20px;
-    height : 35px;
-    object-fit : contain;
-}
-.avatar{
-    height : 35px;
-    padding-right : 20px;
-    background : transparent;
+    height : 30px;
     object-fit : contain;
 }
 .navbar-active{
@@ -42,54 +36,18 @@
     padding-right: 20px;
     background-color: transparent;
 }
-.dropdown-menu{
-    width : 200px;
-    background-color: #000;
-    position: fixed;
-    top : 70px;
-    left : 82%;
-    padding-bottom: 20px;
-}
-.display-drop{
-    display: block;
-}
-.list{
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding : 0px 20px 0px 20px;
-}
-li{
-    text-decoration: none;
-    font-size: 15px;
-    color : white;
-    padding : 8px 0px 8px 0px;
-    border-bottom: 1px solid #464646;
-}
-li:hover{
-    cursor: pointer;
-}
 @media screen and (max-width : 440px){
-    .netflix-logo{
-        height : 38px;
+    .cypherbyte-logo{
+        height : 35px;
         padding-top: 10px;
-    }
-    .avatar{
-        height : 30px;
     }
     .glyphicon-search{
         font-size: 18px;
         padding-top: 15px;
     }
-    .dropdown-menu{
-        left : 60%;
-    }
 }
 @media screen and (max-width : 360px){
     .navbar-container{
         padding : 15px 8px 15px 8px;
-    }
-    .dropdown-menu{
-        left : 50%;
     }
 }

@@ -3,7 +3,7 @@ import Row from './row';
 import requests from './requests';
 import Banner from './banner';
 import Navbar from './navbar';
-import '../static/Home.css'
+import '../static/css/Home.css'
 function Home() {
   useEffect(() => {
       window.scrollTo(0,0);
@@ -12,13 +12,11 @@ function Home() {
     <div className="Home">
         <React.Fragment>
           <Navbar/>
-          <Banner url = {requests.fetchScifi}/>
-          <Row title="Latest Series" url = {requests.fetchSeries} isLarge/>
-          <Row title="Horror Movies" url = {requests.fetchHorror} />
-          <Row title="Action Movies" url = {requests.fetchAction} />
-          <Row title="Sci-fi Movies" url = {requests.fetchScifi} />
-          <Row title="Romantic Movies" url = {requests.fetchRomantic} />
-          <Row title="Others" url = {requests.fetchOthers} />
+          <Banner/>
+          <Row title="Data Structures" url = {requests.fetchSeries} isLarge/>
+          <Row title="Algorithm" url = {requests.fetchHorror} />
+          <Row title="Productivity" url = {requests.fetchAction} />
+          <Row title="Miscellaneous" url = {requests.fetchScifi} />
         </React.Fragment>
         {/* :
         <Redirect to="/login"/>

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "../static/Row.css";
+import "../static/css/Row.css";
 import { BsFillCaretRightFill } from "react-icons/bs";
 import { GoPlus } from "react-icons/go";
 import { MasterContext } from "./masterContext";
@@ -66,12 +66,12 @@ const Movie = ({ movie, isLarge }) => {
               <div className="specs-wrapper">
                 <img
                   className="imdb-logo"
-                  src={require("../static/imdb.png")}
+                  src={require("../static/assets/imdb.png")}
                   alt="imdb-logo"
                 />
                 <img
                   className="imdb-star"
-                  src={require("../static/icons8-star-48.png")}
+                  src={require("../static/assets/icons8-star-48.png")}
                   alt="imdb-star"
                 />
                 <p className="rating-number">{movie.imdbRating}</p>
