@@ -5,7 +5,7 @@
 .banner{
     width : 100vw;
     height : 50rem;
-    background-image: url('../assets/bannernfc.png');
+    background-image: url('../assets/bannernfc.png') !important;
     background-size: contain;
     background-position: right center;
     background-repeat : no-repeat;
@@ -157,7 +157,7 @@
 @media screen and (max-width: 430px){
     .banner{
         height : 60rem;
-        background-image: url('../assets/bannermobile.png');
+        background-image: url('../assets/bannermobile.png') !important;
         background-size: cover;
         background-position: center center;
         background-repeat : no-repeat;

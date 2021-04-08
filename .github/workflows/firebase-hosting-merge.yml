@@ -15,8 +15,8 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FREENETFLIX_FDC5E }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CYPHERBYTE_1A0CC }}'
           channelId: live
-          projectId: freenetflix-fdc5e
+          projectId: cypherbyte-1a0cc
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
