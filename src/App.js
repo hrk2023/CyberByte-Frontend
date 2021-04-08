@@ -11,23 +11,17 @@ import {Player} from './components/videoPlayer';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
   return (
-    <LoginProvider>
-      <MasterProvider>
-        <VideoPlayerContext>
-          <Router>
-            <div className="App">
-              <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/movie" component={MoviePage} />
-                <Route path="/series" component={SeriesPage}/>
-                <Route path="/player" component={Player} />
-                <Route path="/login" component={Login}/>
-              </Switch>
-            </div>
-          </Router>
-        </VideoPlayerContext>
-      </MasterProvider> 
-    </LoginProvider>                            
+    
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/topic" component={MoviePage} />
+          <Route path="/player" component={Player} />
+        </Switch>
+      </div>
+    </Router>
+                                 
   );
 }
 

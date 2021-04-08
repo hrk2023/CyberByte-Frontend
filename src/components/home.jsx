@@ -13,14 +13,8 @@ function Home() {
         <React.Fragment>
           <Navbar/>
           <Banner/>
-          <Row title="Data Structures" url = {requests.fetchSeries} isLarge/>
-          <Row title="Algorithm" url = {requests.fetchHorror} />
-          <Row title="Productivity" url = {requests.fetchAction} />
-          <Row title="Miscellaneous" url = {requests.fetchScifi} />
+          <Row title="Data Structures" url = {requests.fetchDS}/>
         </React.Fragment>
-        {/* :
-        <Redirect to="/login"/>
-        } */}
     </div>
   );
 }

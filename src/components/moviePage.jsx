@@ -1,42 +1,30 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../static/css/moviePage.css';
 import Navbar from './navbar';
+import Docs from './Docs';
+import Episodes from './episodes';
 import {Link,Redirect} from 'react-router-dom';
-import { BsFillCaretRightFill } from 'react-icons/bs';
-import {GoPlus} from 'react-icons/go';
-import {MasterContext} from './masterContext';
-import {PlayerContext} from './videoPlayerContext';
-// http://www.omdbapi.com/?t=Captive+State
+
+
 const MoviePage = () => {
-    const [currentMovie, setCurrentMovie] = useContext(MasterContext);
-    const [url,setUrl] = useContext(PlayerContext);
-    const runtimeFormatter = (runtime) => {
-        runtime = String(runtime);
-        const arr = runtime.split(" ");
-        runtime = parseInt(arr[0]);
-        let quo = parseInt(runtime/60);
-        let rem = runtime%60;
-        return `${quo}h ${rem}min`;
-    }
+    const[topic, setTopic] = useState({});
+
     useEffect(() => {
         window.scrollTo(0,0);
+        console.log("useE");
+        setTopic(JSON.parse(localStorage.getItem("topic")));
     },[])
 
     return(
         <React.Fragment>
-            { currentMovie === null &&
-            <Redirect to="/"/>
-            }
             <Navbar/>
-            { currentMovie !== null &&
             <div className="movie-wrapper">
-                {console.log(currentMovie)}
                 <div className="movie-des">
                     <p className="movie-title">
-                        {currentMovie.title}
+                        {topic.topic}
                     </p>
-                    
-                    <div className="movie-stats">
+                    {console.log(topic.docs)}
+                    {/* <div className="movie-stats">
                         <div className="inner-wrapper">   
                             {currentMovie.Metascore !== "N/A" && <p className="match">{currentMovie.Metascore}% match</p>}
                             <p className="runtime">
@@ -46,19 +34,17 @@ const MoviePage = () => {
                                 {currentMovie.Year}
                             </p>
                             <p className="stats-wrapper">
-                                <img className="logo" src={require('../static/assets/imdb.png')} alt="imdb-logo" />
-                                <img className="star" src={require('../static/assets/icons8-star-48.png')} alt="imdb-star" />
                                 <p className='vote'>{currentMovie.imdbRating}</p>
                                 {currentMovie.isSeries === true && 
                                 <p className="season">{currentMovie.season_collection[0]}</p>
                                 }
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="movie-overview">
-                        {currentMovie.overview}
+                        {topic.description}
                     </div>
-                    <div className="buttons">
+                    {/* <div className="buttons">
                         <Link to="/player">
                             <span className="btn-1">
                                 <BsFillCaretRightFill 
@@ -68,10 +54,13 @@ const MoviePage = () => {
                             </span>
                         </Link>
                         <button className="btn btn-2"><GoPlus className="inner-btn-2"/>Watchlist</button>
-                    </div>
-                    <div className="production">
+                    </div> */}
+                    {/* <div className="production">
                         <div className="directors">
-                            Directors :     <span className="inner-details">{currentMovie.Director}</span>
+                            Docs :     <span className="inner-details">
+                                {console.log(topic.docs)}
+                                {<Docs doc={topic.docs} /> }
+                            </span>
                         </div>
                         <div className="starring">
                             Starring :      <span className="inner-details">{currentMovie.Actors}</span>
@@ -82,10 +71,22 @@ const MoviePage = () => {
                         <div className="language">
                             Language :      <span className="inner-details">{currentMovie.Language}</span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="movie-poster-wrapper">
-                    <img src={currentMovie.poster_path} className="movie-poster" alt='movie poster' />
+                    <img src={topic.poster_path} className="movie-poster" alt='movie poster' />
+                </div>
+            </div>
+
+            {topic.videos !== undefined &&
+            <div className="season-details-wrapper">
+                <div className="episode-bar-wrapper">
+                    <div className="episode-bar-content">
+                        Videos
+                    </div>
+                </div>
+                <div className="episodes-wrapper">
+                    <Episodes episodes = {topic.videos} />
                 </div>
             </div>
             }

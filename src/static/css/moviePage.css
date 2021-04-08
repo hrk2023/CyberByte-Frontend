@@ -1,86 +1,22 @@
 @import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 *{
-    font-family: "Amazon Ember";
+    font-family: 'Ubuntu Mono', monospace;
     box-sizing: border-box;
 }
 .movie-wrapper{
     width: 100vw;
     color: white;
-    height : 100vh;
+    padding: 10% 0px 20% 0px;
     display: flex;
     flex-direction: row;
 }
 .movie-des{
-    position: relative;
-    top : 18%;
     width : 70%;
 }
 .movie-title{
-    position : relative;
+    margin-left: 35px;
     font-size: 35px;
-}
-.runtime{
-    margin-left:5px;
-    font-size: 16px;
-    color: #acacac;
-}
-.release-year{
-    font-size: 16px;
-    width : 60px;
-    margin-left:10px;
-    object-fit: contain;
-    color: #acacac;
-}
-.logo{
-    width : 60px;
-    object-fit: contain;
-}
-.stats-wrapper{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.star{
-    margin-right: 5px;
-    width : 15px;
-    object-fit: contain;
-}
-.vote{
-    font-size: 16px;
-    font-weight: bold;
-    padding-top: 10px;
-    color: #acacac;
-}
-.movie-stats{
-    width : 100%;
-}
-.inner-wrapper{
-    max-width: 40%;
-    margin-left: 35px;
-    display : flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-.series-inner-wrapper{
-    max-width: 35%;
-    margin-left: 35px;
-    display : flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-.season-dropdown-inner{
-    background-color: #282828;
-    padding: 5px 8px;
-    border: 1px solid #c4c4c4;
-    border-radius: 3px;
-    font-size: 16px;
-}
-.season-details-wrapper{
-    position: relative;
-    top : 20%;
-    padding-bottom: 80px;
 }
 .episodes-wrapper{
     width : 98%;
@@ -88,7 +24,7 @@
 }
 .movie-overview{
     margin-left: 35px;
-    font-size: 16px;
+    font-size: 18px;
     width : 80%;
     padding-bottom: 20px;
 }
@@ -213,7 +149,8 @@ a{
         order: 1;
     }
     .movie-poster{
-        width : 250px;
+        width : 90%;
+        padding-top: 20%;
         object-fit: contain;
         margin: auto;
         border-radius: 5px;
@@ -227,22 +164,6 @@ a{
         word-spacing: 0.2cm;
         order: 1;
     }
-    .stats-wrapper{
-        display: flex;
-        flex-direction: row;
-    }
-    .movie-stats{
-        width : 85%;
-        order: 2;
-        margin: auto;
-        justify-content: center;
-    }
-    .series-inner-wrapper{
-        max-width : 80%;
-        justify-content: center;
-        margin-top: 15px;
-        order: 2;
-    }
     .buttons{
         order: 3;
         width: 80%;
@@ -254,15 +175,9 @@ a{
         max-width : 80%;
         margin :auto;
     }
-    .match, .release-year{
-        font-size: 16px;
-    }
-    .runtime{
-        display: none;
-    }
     .movie-overview{
-        font-size: 14px;
-        width: 85%;
+        font-size: 18px;
+        width: 90%;
         margin: auto;
         order: 4;
     }
@@ -298,9 +213,7 @@ a{
         font-size: 22px;
         background-color: transparent;
     }
-    .season-details-wrapper{
-        position: static;
-    }
+   
     .episode-bar-wrapper{
         position: static;
         top: 100%;
@@ -309,27 +222,15 @@ a{
         position: static;
     }
 }
-@media screen and (min-width: 360px),(max-width: 380px){
-    .movie-stats{
-        width : 90%;
-        order: 2;
-    }
-}
 @media screen and (max-width: 360px){
     .movie-title{
         font-size: 30px;
         letter-spacing: 0.12cm;
         word-spacing: 1.8px;
+        margin-top: 10%;
     }
     .buttons{
         width: 100%;
-    }
-    .movie-stats{
-        width : 100%;
-        order: 2;
-    }
-    .match, .release-year{
-        font-size: 14px;
     }
     .buttons{
         order: 3;

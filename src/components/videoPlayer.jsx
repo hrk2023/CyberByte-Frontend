@@ -1,25 +1,32 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {Redirect} from 'react-router-dom';
 import {PlayerContext} from './videoPlayerContext'
 import '../static/css/videoPlayer.css';
 export const Player = () => {
-    const [url,setUrl] = useContext(PlayerContext)
+    const [url,setUrl] = useState("");
+
+    React.useEffect(() => {
+        let data = JSON.parse(localStorage.getItem("video"));
+        let arr = data.split("/");
+        let video_id = "https://youtube.com/embed/" + arr[arr.length - 1];
+        setUrl(video_id);
+    },[])
     return(
         <React.Fragment>
             {url === null &&
-            <Redirect to="/movie"/>
+            <Redirect to="/topic"/>
             }
-            {url === "xyz" ?
-            <h2 className="player-message">Not Available Yet</h2>
-            :
             <iframe
             src={url}
-            allowFullScreen
-            frameborder="0"
+            title="CypherByte" 
+            frameborder="0" 
+            allow="accelerometer; 
+            autoplay; clipboard-write; 
+            encrypted-media; gyroscope; 
+            picture-in-picture" 
+            allowfullscreen
             className="video-player"
-            title={url}
             />
-            }
         </React.Fragment>
     );
 }

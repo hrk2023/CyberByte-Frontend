@@ -57,11 +57,6 @@ const SeriesPage = () => {
                             <p className="release-year">
                                 {currentMovie.Year}
                             </p>
-                            <p className="stats-wrapper">
-                                <img className="logo" src={require('../static/assets/imdb.png')} alt="imdb-logo" />
-                                <img className="star" src={require('../static/assets/icons8-star-48.png')} alt="imdb-star" />
-                                <p className='vote'>{currentMovie.imdbRating}</p>
-                            </p>
                         </div>
                     </div>
                     <div className="movie-overview">

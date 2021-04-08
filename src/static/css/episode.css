@@ -5,17 +5,8 @@
 .episode-box{
     display: flex;
     flex-direction: row;
-    padding : 10px 20px;
+    padding : 10px 10px;
     border-radius: 8px;
-}
-.episode-image-wrapper{
-    width : 30%;
-}
-.episode-image{
-    width: 100%;
-    object-fit: contain;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
 }
 .episode-details-wrapper{
     width : 70%;
@@ -47,23 +38,19 @@
     background-color: #0a0a0a;
 }
 @media screen and (max-width : 440px){
-    .episode-image-wrapper{
-        width : 40%;
-    }
     .episode-details-wrapper{
-        width : 60%;
-    }
-    .episode-details-inner{
         width : 100%;
+        border: 2px solid #acacac;
+        border-radius: 5px;
     }
     .episode-header{
-        width : 90%;
+        width : 100%;
         padding-right: 10px;
         padding-bottom: 5px;
-        font-size: 16px;
+        font-size: 18px;
     }
-    .episode-overview-wrapper{
-        display: none;
+    .season-details-wrapper{
+        padding-bottom: 100px;
     }
     .episode-play-btn{
         display: none;

@@ -36,10 +36,6 @@ function Login(){
             {token &&  <Redirect to="/"/>}
             <div className="login-form-wrapper">
                 <div className="login-form-inner-wrapper">
-                    <div className="img-wrapper">
-                        <img src={require("../static/assets/netflix-logo-png-2562.png")}
-                        className="form-header" alt="netflix logo"/>    
-                    </div> 
                     <form className="login-form"
                      onSubmit={() => formSubmitHandler()}
                     >

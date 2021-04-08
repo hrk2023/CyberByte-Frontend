@@ -1,28 +1,24 @@
 import React, {useState, useEffect} from 'react';
 import '../static/css/Row.css';
 import Movie from './movie';
-function Row({ title, url, isLarge}){
-    const[movies, setMovies] = useState([]);
+import axios from 'axios';
+
+function Row({ title, url}){
+    const[vids, setVids] = useState([]);
     useEffect(() => {
-        function fetchData() {
-            const xhr = new XMLHttpRequest();
-            xhr.open('GET',url,true);
-            xhr.responseType = 'json';
-            xhr.addEventListener('load', () => {
-                if(xhr.status === 200){
-                    setMovies(xhr.response.result);
-                }
-            });
-            xhr.send();
-        }
-        fetchData();
+        axios.get(url)
+        .then(response => {
+            setVids(response.data.result);
+            console.log(response);
+        })
+        .catch(error => console.log(error));
     },[url]);
     return(
         <div className="row-container">
             <h3>{title}</h3> 
-            <div className={`${isLarge ? 'movie-row' : 'movie-small'}`}>
-                {movies.map((movie) => (
-                    <Movie movie={movie} isLarge={isLarge} />
+            <div className='movie-small'>
+                {vids.map((vid) => (
+                    <Movie movie={vid} />
                 ))}
             </div>
         </div>
